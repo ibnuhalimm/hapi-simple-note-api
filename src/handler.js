@@ -37,4 +37,15 @@ const addNoteHandler = (request, h) => {
     return response;
 };
 
-module.exports = { addNoteHandler };
+
+const getAllNotesHandler = () => {
+    return {
+        status: 'success',
+        data: {
+            notes: notes,
+        },
+    };
+};
+
+
+module.exports = { addNoteHandler, getAllNotesHandler };
